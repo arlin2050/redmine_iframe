@@ -1,0 +1,23 @@
+<%= javascript_include_tag('iframeResizer.contentWindow.min.js', :plugin => 'redmine_iframe') %>
+<script type="text/javascript">
+    $(function() {
+        if(window.location != window.parent.location) {
+            <% if Setting.plugin_redmine_iframe[:hide_menu] %>
+            $('body').find('#wrapper3 #top-menu').css('display','none');
+            <% end %>
+            <% if Setting.plugin_redmine_iframe[:hide_header] %>
+            $('body').find('#wrapper3 #header').css('display','none');
+            <% end %>
+            <% if Setting.plugin_redmine_iframe[:hide_footer] %>
+            $('body').find('#wrapper #footer').css('display','none');
+            <% end %>
+            <% if Setting.plugin_redmine_iframe[:hide_private] %>
+            $('body').find('#issue_is_private').css('display','none');
+            $('body').find('#issue_is_private_label').css('display','none');
+            <% end %>
+            <% if Setting.plugin_redmine_iframe[:hide_input_continue] %>
+            $('body').find('input[name="continue"]').css('display','none');
+            <% end %>
+        }
+    });
+</script>

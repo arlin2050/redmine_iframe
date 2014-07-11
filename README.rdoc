@@ -1,0 +1,4 @@
+= redmine_iframe
+
+This plugins modify Redmine layout when included in an iframe. For the moment, this plugin only hide header and footer. Those are parameters of the plugin.
+It also uses iframe-resizer plugin (https://github.com/davidjbradshaw/iframe-resizer) to give parent window informations about height and width.
